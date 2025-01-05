@@ -3,8 +3,8 @@ const Database = require("better-sqlite3");
 const path = require("path");
 const { app } = require("electron");
 
-// If you're in dev mode, you can also do something like:
-// const dbPath = path.join(__dirname, "..", "demo_tableeeee.db");
+// Set process env for deployment
+process.env.NODE_ENV = 'deployment';
 
 let dbPath;
 if (process.env.NODE_ENV === "development") {

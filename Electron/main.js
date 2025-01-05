@@ -3,8 +3,9 @@ const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
 function createMainWindow() {
-  // Set environment for production (if needed)
-process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
+  
+// Optionally, you can set ELECTRON_DISABLE_SECURITY_WARNINGS based on NODE_ENV
+  process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
 
   const mainWindow = new BrowserWindow({
     title: 'Electron',
@@ -23,7 +24,7 @@ process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = 'true';
   // mainWindow.webContents.openDevTools();
 
   // Load the production build of your React app
-  mainWindow.loadFile(path.join(__dirname, '..','Frontend', 'build', 'index.html'));
+  mainWindow.loadFile(path.join(__dirname, 'Frontend', 'build', 'index.html'));
 }
 
 app.whenReady().then(createMainWindow);

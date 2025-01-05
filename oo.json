@@ -1,0 +1,34 @@
+{
+    "name": "ElectronReactSystemManagement",
+    "description": "Electron + React + SQLite",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+      "build:react": "cd Frontend && npm install && npm run build",
+      "start": "electron-forge start",
+  @@ -15,14 +16,14 @@
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "linux"
+          ]
+        }
+      ],
+      "packagerConfig": {
+  @@ -41,10 +42,7 @@
+    },
+    "devDependencies": {
+      "@electron-forge/cli": "^6.4.2",
+      "@electron-forge/maker-deb": "^6.4.2",
+      "@electron-forge/maker-rpm": "^6.4.2",
+      "@electron-forge/maker-squirrel": "^6.4.2",
+      "@electron-forge/maker-zip": "^6.4.2",
+      "@electron-forge/plugin-auto-unpack-natives": "^6.4.2",
+      "@types/better-sqlite3": "^7.6.12",
+      "electron": "^32.0.2",
