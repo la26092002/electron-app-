@@ -1,5 +1,8 @@
 # electron-app-
-export NODE_OPTIONS=--disable-warning=DEP0174
+
+Error :  https://github.com/electron/forge/issues/3640
+
+Solution : export NODE_OPTIONS=--disable-warning=DEP0174
 
 
 $ npm run rebuild
